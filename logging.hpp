@@ -5,7 +5,7 @@
 #include <spdlog/sinks/daily_file_sink.h>
 #include <spdlog/sinks/stdout_color_sinks.h>
 
-namespace logging {
+namespace wkstk::logging {
     inline std::shared_ptr<spdlog::sinks::dist_sink_mt> __logger_sinks;
     inline std::shared_ptr<spdlog::logger> logger;
 
@@ -44,9 +44,9 @@ namespace logging {
     }
 }
 
-#define LOG_TRACE(...)                                          logging::logger->trace(__VA_ARGS__)
-#define LOG_DEBUG(...)                                          logging::logger->debug(__VA_ARGS__)
-#define LOG_INFO(...)                                           logging::logger->info(__VA_ARGS__)
-#define LOG_WARN(...)                                           logging::logger->warn(__VA_ARGS__)
-#define LOG_ERROR(...)                                          logging::logger->error(__VA_ARGS__)
-#define LOG_CRITICAL(...)                                       logging::logger->critical(__VA_ARGS__)
+#define LOG_TRACE(...)                                          wkstk::logging::logger->trace(__VA_ARGS__)
+#define LOG_DEBUG(...)                                          wkstk::logging::logger->debug(__VA_ARGS__)
+#define LOG_INFO(...)                                           wkstk::logging::logger->info(__VA_ARGS__)
+#define LOG_WARN(...)                                           wkstk::logging::logger->warn(__VA_ARGS__)
+#define LOG_ERROR(...)                                          wkstk::logging::logger->error(__VA_ARGS__)
+#define LOG_CRITICAL(...)                                       wkstk::logging::logger->critical(__VA_ARGS__)

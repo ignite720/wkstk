@@ -2,7 +2,7 @@
 
 #include <cstdlib>
 
-namespace simplerand {
+namespace wkstk::simplerand {
     inline void from_seed(unsigned seed) {
         std::srand(seed);
     }
